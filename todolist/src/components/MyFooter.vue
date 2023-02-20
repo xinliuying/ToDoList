@@ -13,7 +13,7 @@
 <script>
 export default {
     name:'MyFooter',
-    props:['todos','CheckAll','clearAllTodo'],
+    props:['todos','CheckAll'],
     computed:{
         doneNum(){
             // 数组函数reduce的使用，对该数组进行统计
@@ -31,9 +31,9 @@ export default {
     },
     methods:{
         clearAll(){
-            this.clearAllTodo();
+            this.$emit('clearAllTodo');
         }
-    }
+    },
 }
 </script>
 

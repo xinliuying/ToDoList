@@ -2,7 +2,7 @@
 <ul class="todo-main">
     <!-- 遍历展示数据 -->
     <!-- 组件间通信 父子间组件通信 这里使用props -->
-    <MyItem v-for="todoObj in todos" :key="todoObj.id" :todoObj="todoObj" :todoDone="todoDone" :todoDelete="todoDelete"/>
+    <MyItem v-for="todoObj in todos" :key="todoObj.id" :todoObj="todoObj"/>
 </ul> 
 </template>
 
@@ -12,7 +12,7 @@ import MyItem from './MyItem';
 export default {
     name:'MyList',
     components:{MyItem},
-    props:['todos','todoDone','todoDelete']
+    props:['todos']
 }
 </script scoped>
 
